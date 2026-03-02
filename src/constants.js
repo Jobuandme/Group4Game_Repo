@@ -19,14 +19,14 @@ const C = {
   STAMINA_LOW: 25,          // threshold for warning color
 
   // Echolocation
-  ECHO_COOLDOWN: 180,       // frames (~3s at 60fps)
-  ECHO_DURATION: 240,       // frames visible
-  ECHO_FADE_START: 160,     // when to start fading
-  ECHO_RADIUS_GROWTH: 6,    // px per frame during pulse expand
+  ECHO_COOLDOWN: 240,       // frames (~3s at 60fps)
+  ECHO_DURATION: 80,       // frames visible 
+  ECHO_FADE_START: 120,     // when to start fading
+  ECHO_RADIUS_GROWTH: 4,    // px per frame during pulse expand
 
   // Vision
-  VISION_RADIUS: 120,       // px around player always visible
-  VISION_SOFTNESS: 60,      // px of gradient edge
+  VISION_RADIUS: 70,        // px around player always visible
+  VISION_SOFTNESS: 35,      // px of gradient edge
 
   // Player
   MAX_HP: 3,
