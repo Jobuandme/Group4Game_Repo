@@ -10,11 +10,11 @@ const C = {
   FLY_FORCE: -0.6,
   MAX_FALL_SPEED: 10,
   MOVE_SPEED: 3.2,
-  WALL_SLIDE_SPEED: 1.2,
+  WALL_SLIDE_SPEED: 0.2,
 
   // Stamina
   MAX_STAMINA: 100,
-  STAMINA_DRAIN: 0.35,      // per frame while flying
+  STAMINA_DRAIN: 0.5,      // per frame while flying
   STAMINA_REGEN: 0.8,       // per frame while hanging
   STAMINA_LOW: 25,          // threshold for warning color
 
