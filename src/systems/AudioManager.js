@@ -95,13 +95,13 @@ class AudioManager {
     this._bgmPending  = false; // true if startBgm() was called before buffer decoded
     this._pending     = {};
 
-    this._fetch('assets/gameBgm.mp3',          'bgm');
-    this._fetch('assets/wings',                'wings');
-    this._fetch('assets/pavement%20_walk.wav', 'walk');
-    this._fetch('assets/AppleCrunch.wav',      'crunch');
-    this._fetch('assets/damageHurt.wav',       'hurt');
-    this._fetch('assets/sonar.mp3',                 'sonar');
-    this._fetch('assets/whooshInstructions.mp3',    'whoosh');
+    this._fetch('assets/audio/gameBgm.mp3',          'bgm');
+    this._fetch('assets/audio/wings',                'wings');
+    this._fetch('assets/audio/pavement%20_walk.wav', 'walk');
+    this._fetch('assets/audio/AppleCrunch.wav',      'crunch');
+    this._fetch('assets/audio/damageHurt.wav',       'hurt');
+    this._fetch('assets/audio/sonar.mp3',            'sonar');
+    this._fetch('assets/audio/whooshInstructions.mp3', 'whoosh');
   }
 
   _fetch(url, key) {
@@ -113,8 +113,13 @@ class AudioManager {
 
   // Call on first keypress to satisfy browser autoplay policy.
   unlock() {
-    if (this._ctx) return;
+    if (this._ctx) {
+      // Resume in case the browser suspended the context after creation.
+      if (this._ctx.state === 'suspended') this._ctx.resume();
+      return;
+    }
     this._ctx   = new (window.AudioContext || window.webkitAudioContext)();
+    this._ctx.resume(); // force active — some browsers start suspended
     this._bgm   = new _AudioTrack(this._ctx, VOL_BGM);
     this._wings = new _AudioTrack(this._ctx, VOL_WINGS);
     this._walk  = new _AudioTrack(this._ctx, VOL_WALK);
