@@ -82,3 +82,17 @@ The tutorial will be redesigned as a playable sequence instead of a slideshow, a
 | `sonar.mp3`   | Echolocation ping (E key) |
 
 ## References
+
+Mixkit. (n.d.). *Bat wing flap loop* [Sound effect]. Mixkit. https://mixkit.co
+
+Mixkit. (n.d.). *Pavement walk footstep loop* [Sound effect]. Mixkit. https://mixkit.co
+
+Mixkit. (n.d.). *Apple crunch* [Sound effect]. Mixkit. https://mixkit.co
+
+Mixkit. (n.d.). *Damage hurt hit* [Sound effect]. Mixkit. https://mixkit.co
+
+Mixkit. (n.d.). *Whoosh transition* [Sound effect]. Mixkit. https://mixkit.co
+
+Pixabay. (n.d.). *Sonar ping* [Sound effect]. Pixabay. https://pixabay.com
+
+Pixabay. (n.d.). *Game background music* [Music]. Pixabay. https://pixabay.com
